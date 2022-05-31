@@ -12,7 +12,7 @@ std::vector <std::string> CountAll(std::vector<char> all_text)
         symbols = all_text.size() - 1;
     for (int i = 1; i < all_text.size(); i++)
     {
-        if ((all_text[i] == ' ' || all_text[i] == '\n') && isalpha(all_text[i - 1]))
+        if (!isalpha(all_text[i]) && isalpha(all_text[i - 1]))
             words++;
 
         if (all_text[i] == ' ' && all_text[i - 1] == '\n')

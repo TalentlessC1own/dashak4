@@ -59,7 +59,6 @@ std::vector<char> MultilineInput()
             continue;
         }
         all_text.push_back(temp_char);
-        Sleep(200);
     }
   
     return all_text;;

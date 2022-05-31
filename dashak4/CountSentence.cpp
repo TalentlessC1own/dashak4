@@ -8,7 +8,7 @@ std::vector<SentenciesCounter> CountSentence(std::vector<char> all_text)
     {
         if (!isalpha(all_text[i]) && isalpha(all_text[i - 1]))
             sent_words++;
-        if (all_text[i] == '.'|| i == all_text.size() - 1 && sent_words > 0)
+        if (all_text[i] == '!' || all_text[i] == '?' || all_text[i] == '.'|| i == all_text.size() - 1 && sent_words > 0)
         {
             bool find = false;
             for (int j = 0; j < counters.size(); j++)
